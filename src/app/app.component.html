@@ -1,4 +1,14 @@
-<hello name="{{ name }}"></hello>
+<!-- <hello name="{{ name }}"></hello> -->
+<h1>BOARD GAME</h1>
 <p>
-  Start editing to see some magic happen :)
+  Board awal
 </p>
+
+<div *ngFor="let b of board">
+{{ b }}
+</div>
+
+<p>User 1: </p>
+<input type="text" [(ngModel)]="in1">
+<button (click)="show()">GO!</button>
+{{ ar }}
