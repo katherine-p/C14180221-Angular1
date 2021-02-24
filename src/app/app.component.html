@@ -1,29 +1,31 @@
 <!-- <hello name="{{ name }}"></hello> -->
-<h1>BOARD GAME</h1>
-<p>
-  Board awal
-</p>
 
-<div *ngFor="let b of board">
-{{ b }}
-</div>
+<html>
+  <h1>BOARD GAME</h1>
 
-<p>User 1: </p>
-<input type="text" [(ngModel)]="in1">
-<button (click)="show()">GO!</button>
-{{ a }}
 
-<div *ngFor="let ba of board2">
-{{ ba }}
-</div>
-<br>
 
-<p>User 2:</p>
-<input type="text" [(ngModel)]="in2">
-<button (click)="show2()">GO!</button>
-{{ a }}
+<p>User {{ player }} :</p>
 
-<div *ngFor="let ba of board3">
-{{ ba }}
-</div>
+<input type="text" [(ngModel)]="inp">
+<button (click)="submit()">GO!</button>
+
+<br><br>
+
+<label *ngFor="let b of board;">
+    <label *ngFor="let k of b; let i = index">
+      {{ k }}
+    </label>
+    <br>
+  </label>
+
+<ng-template *ngIf="winner != null; then templatetrue;"> </ng-template>
+
+<ng-template #templatetrue>
+  <h4>{{ winner }}</h4>
+</ng-template>
+</html>
+
+
+
 
