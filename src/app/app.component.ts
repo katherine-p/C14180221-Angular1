@@ -45,23 +45,17 @@ export class AppComponent  {
            this.cekwin();
          }
          else{
-           alert("Baris dan kolom sudah terisi");
+           alert("Baris dan kolom sudah terisi.");
          }
        }
-       else if(this.index1 < 0){
-         alert("Invalid baris kurang dari 1");
+       else if(this.index1 < 0 || this.index1 > 5){
+         alert("Invalid baris.");
        }
-       else if(this.index2 < 0){
-         alert("Invalid kolom kurang dari 1")
-       }
-       else if(this.index1 > 5){
-         alert("Invalid baris lebih dari 5");
-       }
-       else if(this.index2 > 5){
-         alert("Invalid kolom lebih dari 5")
+       else if(this.index2 < 0 || this.index2 > 5){
+         alert("Invalid kolom.")
        }
        else{
-         alert("Input tidak sesuai")
+         alert("Input tidak sesuai.")
        }
     
      }
@@ -81,13 +75,11 @@ export class AppComponent  {
          }
        }
        if(this.count0 > 4){
-         this.winner = "The winner is Player 0";
-         this.player = "-";
+         this.winner = "The Winner is Player 0!";
          this.stat = true;
        }
        else if(this.count1 > 4){
-         this.winner = "The winner is Player 1"
-         this.player = "-";
+         this.winner = "The Winner is Player 1!";
          this.stat = true;
        }
      }
@@ -106,11 +98,11 @@ export class AppComponent  {
        }
 
        if(this.count0 > 4){
-         this.winner = "The winner is Player 0";
+         this.winner = "The Winner is Player 0!";
          this.stat = true;
        }
        else if(this.count1 > 4){
-         this.winner = "The winner is Player 1";
+         this.winner = "The Winner is Player 1!";
          this.stat = true;
        }
 
