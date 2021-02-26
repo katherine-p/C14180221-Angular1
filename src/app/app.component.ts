@@ -35,14 +35,13 @@ export class AppComponent  {
        if(this.index1 >= 0 && this.index1 <= 4 && this.index2 >= 0 &&this.index2 <= 4){
          if(this.board[this.index1][this.index2] == "*"){
            this.board[this.index1][this.index2] = this.player;
-           
+           this.cekwin();
            if(this.player == "1"){
              this.player = "0";
            }
            else{
              this.player = "1";
-           }
-           this.cekwin();
+           }           
          }
          else{
            alert("Baris dan kolom sudah terisi.");
