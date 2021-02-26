@@ -88,7 +88,7 @@ export class AppComponent  {
      for(var b = 0; b < 5; b++){
        this.count0 = 0;
        this.count1 = 0;
-       for(var k = 0; k < 6; k++){
+       for(var k = 0; k < 5; k++){
          if(this.board[b][k] == "0"){
            this.count0++;
          }
