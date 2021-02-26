@@ -21,8 +21,8 @@ export class AppComponent  {
   index2 : number;  
   player = "0";
   stat : boolean = false;
-  count1 = 0;
-  count0 = 0;
+  countp1 = 0;
+  countp0 = 0;
   winner : string;
 
   submit()
@@ -64,21 +64,21 @@ export class AppComponent  {
    cekwin(){ 
     //  cek vertical    
      for(var b = 0; b < 5; b++){
-       this.count0 = 0;
-       this.count1 = 0;
+       this.countp0 = 0;
+       this.countp1 = 0;
        for(var k = 0; k < 5; k++){
          if(this.board[k][b] == "0"){
-           this.count0++;
+           this.countp0++;
          }
          else if(this.board[k][b] == "1"){
-           this.count1++;
+           this.countp1++;
          }
        }
-       if(this.count0 > 4){
+       if(this.countp0 > 4){
          this.winner = "The Winner is Player 0!";
          this.stat = true;
        }
-       else if(this.count1 > 4){
+       else if(this.countp1 > 4){
          this.winner = "The Winner is Player 1!";
          this.stat = true;
        }
@@ -86,22 +86,22 @@ export class AppComponent  {
 
      //cek horizontal
      for(var b = 0; b < 5; b++){
-       this.count0 = 0;
-       this.count1 = 0;
+       this.countp0 = 0;
+       this.countp1 = 0;
        for(var k = 0; k < 5; k++){
          if(this.board[b][k] == "0"){
-           this.count0++;
+           this.countp0++;
          }
          else if(this.board[b][k] == "1"){
-           this.count1++;
+           this.countp1++;
          }
        }
 
-       if(this.count0 > 4){
+       if(this.countp0 > 4){
          this.winner = "The Winner is Player 0!";
          this.stat = true;
        }
-       else if(this.count1 > 4){
+       else if(this.countp1 > 4){
          this.winner = "The Winner is Player 1!";
          this.stat = true;
        }
